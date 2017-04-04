@@ -9,7 +9,7 @@ yarn.ppa:
   pkgrepo.managed:
     - humanname: Yarn Repository
     - name: deb {{ salt['pillar.get']('yarn:ppa:repository_url', 'deb https://dl.yarnpkg.com/debian/') }} stable main
-    - dist: {{ grains['oscodename'] }}
+    - dist: stable
     - file: /etc/apt/sources.list.d/yarn.list
     - key_url: https://dl.yarnpkg.com/debian/pubkey.gpg
     - require_in:
