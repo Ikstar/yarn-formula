@@ -1,0 +1,6 @@
+# Install from PPA:
+yarn:
+  version: 0.21.3
+  install_from_ppa: True
+  ppa:
+    repository_url: https://dl.yarnpkg.com/debian/

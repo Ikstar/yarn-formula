@@ -1,0 +1,13 @@
+{% set pillar_get = salt['pillar.get'] -%}
+
+{% set yarn = salt['grains.filter_by']({
+    'CentOS': {
+        'yarn_pkg': 'yarn',
+    },
+    'Debian': {
+        'yarn_pkg': 'nodejs' if grains['osrelease']|float < 8 or
+    },
+    'Ubuntu': {
+        'yarn_pkg': 'yarn',
+    },
+}, grain='os', merge=pillar_get('yarn:lookup')) %}
