@@ -6,7 +6,7 @@ This formula installs [yarn](https://yarnpkg.com/en/).
 
 An example pillar for installing from Debian based PPA repository:
 
-    node:
+    yarn:
       version: 0.2.1
       install_from_ppa: True
       ppa:
